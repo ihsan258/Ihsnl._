@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Single Page App</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+
+        #button {
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        #page2 {
+            font-size: 24px;
+            text-align: center;
+            margin-top: 200px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Halaman 1 -->
+    <div id="page1">
+        <button id="button">klick</button>
+    </div>
+
+    <!-- Halaman 2 -->
+    <div id="page2" class="hidden">
+        new text
+    </div>
+
+    <script>
+        document.getElementById("button").onclick = function() {
+            document.getElementById("page1").classList.add("hidden");
+            document.getElementById("page2").classList.remove("hidden");
+        };
+    </script>
+</body>
+</html>
